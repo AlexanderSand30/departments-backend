@@ -47,7 +47,7 @@ class DepartmentController extends Controller
      */
     public function show(string $id)
     {
-        return Department::find($id);
+        return Department::with('subdepartments')->find($id);
     }
 
     /**
